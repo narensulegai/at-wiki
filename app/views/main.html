@@ -1,36 +1,12 @@
 <section class="table-of-content">
   <h1>Content</h1>
   <ul>
-    <li>
-      <h2>What is AT?</h2>
+    <li ng-repeat="c in content">
+      <a href="#{{c.title | idfy}}" onclick="return false" ng-click="scrollTo($event)" ng-bind="c.title"></a>
       <ul>
-        <li>Why we need AT?</li>
-        <li>Looking through an AT's eye</li>
-        <li>Philosophy behind AT</li>
-      </ul>
-    </li>
-    <li>
-      <h2>Getting started</h2>
-      <ul>
-        <li>The basics</li>
-        <li>How to jumpstart</li>
-        <li>External resources</li>
-      </ul>
-    </li>
-    <li>
-      <h2>Best practices</h2>
-      <ul>
-        <li>Tips</li>
-        <li>Dos and Don'ts</li>
-        <li>What we learnt</li>
-      </ul>
-    </li>
-    <li>
-      <h2>Lets code</h2>
-      <ul>
-        <li>Samples</li>
-        <li>Snippets</li>
-        <li>How to structure your code</li>
+        <li ng-repeat="sub in c.subTitles">
+          <a href="#{{sub.title | idfy}}" onclick="return false" ng-click="scrollTo($event)" ng-bind="sub.title"></a>
+        </li>
       </ul>
     </li>
   </ul>
@@ -38,5 +14,16 @@
 
 
 <div class="row">
+  <div class="col-md-12">
 
+    <section ng-repeat="c in content" resource="#{{c.title | idfy}}" id="{{c.title | idfy}}">
+      <h2 ng-bind="c.title"></h2>
+      <p ng-bind="c.title"></p>
+      <section ng-repeat="sub in c.subTitles" resource="#{{sub.tile | idfy}}" id="{{sub.title | idfy}}">
+        <h3 ng-bind="sub.title"></h3>
+        <p ng-bind="sub.title"></p>
+      </section>
+    </section>
+
+  </div>
 </div>
