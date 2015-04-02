@@ -1,17 +1,18 @@
 <p>
   This is a beginner's guide to design and build accessible web application. More specifically, this is a guide to help you build websites in a way that people with disabilities
-  (such as visual, physical or neurological) are be able to understand, interact and contribute just as easily as a normal person can.
+  (such as visual, physical or neurological) are be able to understand, interact and contribute to your website just as easily as a normal person can. If you are a web
+  developer trying to creat accessible websites and dont know where to start, then you are at the right spot.
 </p>
 <p>
   It might be mildly surprising that you can browse this page with your eyes closed right now! Applications, called screen readers are meant to do just that.
   <a href="http://www.chromevox.com/">ChromeVox</a> is one such (free) plugin for Google Chrome browser. Screen readers use a combination of keyboard and text to speech to
   aid visually impaired users browse the web. So imagine you type in the url of a page and when the page is loaded the screen reader starts reading out the content and when you
   press <code>Tab</code> it reads out the first actionable link on the page and when you hit <code>Enter</code> it opens that link. Of course browsing a page can be way more
-  complex than that and  unfortunately most of the websites are not designed to be compatible with screen readers.. But if you design your website in a way that will help the
+  complex than that and unfortunately most of the websites are not designed to be compatible with screen readers. But if you design your website in a way that will help the
   screen readers do their job then you can enable a visually impaired user do exactly as much as a normal user can.
 </p>
 <p>
-  Tools that help individuals with disabilities to browse the web are termed as Assistive Technology (AT).
+  Tools that help individuals with disabilities to interact with web applications are termed as Assistive Technology (AT).
 </p>
 <div>
   ATs include tools like
@@ -31,11 +32,11 @@
 
 </div>
 <p>
-  Much like how W3C defined HTML5 to standardise HTML markup, Web Content Accessibility Guidelines (<a href="http://www.w3.org/TR/WCAG20/">WCAG</a>) defined guidelines to
-  make web applications more accessible. Which means that a developer who want to make his website usable via ATs have to follow these guidelines. The aim of this guide is not to
-  decrypt the plethora of WCAG guidelines but to inspire developers with the philosophy behind it. In order to program websites that are compliant with WCAG you will needs
-  to make a paradigm shift, just like jQuery to Angularjs or non-functional to functional programing. The following section is designed to help you make that paradigm shift with
-  a list of live examples and code snippets which will help you in looking <i>through an AT's eye</i>.
+  Much like how W3C defined HTML5 to standardise HTML markup, Web Content Accessibility Guidelines (<a href="http://www.w3.org/TR/WCAG20/" target="_blank">WCAG</a>) defined
+  guidelines to make web applications more accessible. Which means that a developer who want to make his website usable via ATs have to follow these guidelines. The aim of this
+  guide is not to decrypt the plethora of WCAG guidelines but to inspire developers with the philosophy behind it. In order to program websites that are compliant with WCAG you
+  will needs to make a paradigm shift, just like jQuery to Angularjs or non-functional to functional programing. The following section is designed to help you make that paradigm
+  shift with a list of live examples and code snippets which will help you in looking <i>through an AT's eye</i>.
 </p>
 
 
@@ -59,7 +60,8 @@
 
     <section ng-repeat="c in content" resource="#{{c.title | idfy}}" id="{{c.title | idfy}}">
       <h2 ng-bind="c.title"></h2>
-      <p ng-bind="c.title"></p>
+      <div ng-include="c.partial" ng-if="c.partial"></div>
+      <p ng-bind="c.title" ng-if="!c.partial"></p>
       <section ng-repeat="sub in c.subTitles" resource="#{{sub.tile | idfy}}" id="{{sub.title | idfy}}">
         <h3 ng-bind="sub.title"></h3>
         <p ng-bind="sub.title"></p>

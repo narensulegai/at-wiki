@@ -12,7 +12,7 @@ angular.module('atWikiApp')
 
     $scope.content = [
       {
-        title: 'What is AT?',
+        title: 'What is it?', partial: 'views/titles/1.html',
         subTitles: [
           {title: 'Why we need AT?', partial: ''},
           {title: 'Looking through an AT\'s eye', partial: ''},
@@ -20,7 +20,7 @@ angular.module('atWikiApp')
         ]
       },
       {
-        title: 'Getting started',
+        title: 'How do I start',
         subTitles: [
           {title: 'The basics', partial: ''},
           {title: 'How to jumpstart', partial: ''},
@@ -28,15 +28,15 @@ angular.module('atWikiApp')
         ]
       },
       {
-        title: 'Best practices',
+        title: 'What I need to keep in mind?',
         subTitles: [
           {title: 'Tips', partial: ''},
           {title: 'Dos and Don\'ts', partial: ''},
-          {title: 'What we learnt', partial: ''}
+          {title: 'Best practices', partial: ''}
         ]
       },
       {
-        title: 'Lets code',
+        title: 'How to code',
         subTitles: [
           {title: 'Samples', partial: ''},
           {title: 'Snippets', partial: ''},
