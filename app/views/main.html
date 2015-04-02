@@ -62,9 +62,10 @@
       <h2 ng-bind="c.title"></h2>
       <div ng-include="c.partial" ng-if="c.partial"></div>
       <p ng-bind="c.title" ng-if="!c.partial"></p>
-      <section ng-repeat="sub in c.subTitles" resource="#{{sub.tile | idfy}}" id="{{sub.title | idfy}}">
-        <h3 ng-bind="sub.title"></h3>
-        <p ng-bind="sub.title"></p>
+      <section ng-repeat="s in c.subTitles" resource="#{{sub.title | idfy}}" id="{{sub.title | idfy}}" class="sub-section">
+        <h3 ng-bind="s.title"></h3>
+        <p ng-bind="s.title" ng-if="!s.partial"></p>
+        <div ng-include="s.partial" ng-if="s.partial"></div>
       </section>
     </section>
 

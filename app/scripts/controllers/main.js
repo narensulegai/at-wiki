@@ -14,7 +14,7 @@ angular.module('atWikiApp')
       {
         title: 'What is it?', partial: 'views/titles/1.html',
         subTitles: [
-          {title: 'Why we need AT?', partial: ''},
+          {title: 'Why we need it?', partial: 'views/sub-section/1.1.html'},
           {title: 'Looking through an AT\'s eye', partial: ''},
           {title: 'Philosophy behind AT', partial: ''}
         ]
