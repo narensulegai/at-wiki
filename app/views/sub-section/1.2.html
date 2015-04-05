@@ -1,23 +1,18 @@
 <p>
   Before digging into the <a href="http://www.w3.org/TR/WCAG20/" target="_blank">WCAG</a> guidelines, lets try to understand what we trying to solve. The section below will
-  will help you understand how a disabled user would browse the page. These insights will help you make the paradigm shift from building regular websites to accessable
-  websites.
+  will help you understand how a disabled user would browse the page.
 </p>
 <ul>
   <li>
-    <h5>
-      The example below simulates a non sighted individual using a screen reader. The goal of this exercise is to use keyboard <b>only</b> to submit a login form.
-    </h5>
+    The example below simulates a non-sighted individual using a screen reader. The goal of this exercise is to use keyboard <b>only</b> to submit a login form.
     <div ng-controller="NonSightedUserSimulationCtrl">
+      <br/>
       <p>
         <button ng-click="start()" class="button-1">Click Here To Begin</button>
       </p>
       <div ng-show="started" class="exe">
-
         <p>
-          Below is a hidden login form. Use the keyboard to navigate.
-          <br/>
-          The audio icon on the right will indicate what the screen reader is speaking'.
+          Below is a hidden login form. The audio icon will indicate what the screen reader is 'speaking'.
         </p>
         <div ng-show="step==1" class="instruction" ng-class="{flip:step==1}">
           Press <code>Down</code> arrow to begin.
