@@ -1,13 +1,13 @@
 <p>
-  This is a beginner's guide to design and build accessible web application. More specifically, this is a guide to help you build websites in a way that people with disabilities
+  This is a beginner's guide for building accessible web application. More specifically, this guide will help you build websites in a way that people with disabilities
   (such as visual, physical or neurological) are be able to understand, interact and contribute to your website just as easily as a normal person can. If you are a web
-  developer trying to creat accessible websites and dont know where to start, then you are at the right spot.
+  developer looking to create accessible websites and dont know where to start, you are at the right place.
 </p>
 <p>
-  It might be mildly surprising that you can browse this page with your eyes closed right now! Applications, called screen readers are meant to do just that.
-  <a href="http://www.chromevox.com/">ChromeVox</a> is one such (free) plugin for Google Chrome browser. Screen readers use a combination of keyboard and text to speech to
-  aid visually impaired users browse the web. So imagine you type in the url of a page and when the page is loaded the screen reader starts reading out the content and when you
-  press <code>Tab</code> it reads out the first actionable link on the page and when you hit <code>Enter</code> it opens that link. Of course browsing a page can be way more
+  It might be surprising that you can browse this page with your eyes closed! Applications called screen readers are meant to do just that.
+  <a href="http://www.chromevox.com/">ChromeVox</a> is one such (free) plugin for Google Chrome browser. Screen readers use a combination of keyboard input and text-to-speech
+  software to aid visually impaired users browse the web. So imagine you type in the url of a page, and screen reader starts reading out the content and when
+  you press <code>Tab</code> it reads out the first actionable link on the page and when you hit <code>Enter</code> it opens that link. Of course browsing a page can be way more
   complex than that and unfortunately most of the websites are not designed to be compatible with screen readers. But if you design your website in a way that will help the
   screen readers do their job then you can enable a visually impaired user do exactly as much as a normal user can.
 </p>
@@ -46,8 +46,8 @@
     <li ng-repeat="c in content">
       <a href="#{{c.title | idfy}}" onclick="return false" ng-click="scrollTo($event)" ng-bind="c.title"></a>
       <ul>
-        <li ng-repeat="sub in c.subTitles">
-          <a href="#{{sub.title | idfy}}" onclick="return false" ng-click="scrollTo($event)" ng-bind="sub.title"></a>
+        <li ng-repeat="s in c.subTitles">
+          <a href="#{{s.title | idfy}}" onclick="return false" ng-click="scrollTo($event)" ng-bind="s.title"></a>
         </li>
       </ul>
     </li>
@@ -62,7 +62,7 @@
       <h2 ng-bind="c.title"></h2>
       <div ng-include="c.partial" ng-if="c.partial"></div>
       <p ng-bind="c.title" ng-if="!c.partial"></p>
-      <section ng-repeat="s in c.subTitles" resource="#{{sub.title | idfy}}" id="{{sub.title | idfy}}" class="sub-section">
+      <section ng-repeat="s in c.subTitles" resource="#{{s.title | idfy}}" id="{{s.title | idfy}}" class="sub-section">
         <h3 ng-bind="s.title"></h3>
         <p ng-bind="s.title" ng-if="!s.partial"></p>
         <div ng-include="s.partial" ng-if="s.partial"></div>

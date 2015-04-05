@@ -2,6 +2,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+
 .table-of-content {
   border: 1px solid #E7E7E7;
   background: #F8F8F8;
@@ -10,4 +11,109 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 .sub-section {
   margin-left: 20px;
+}
+
+.instruction {
+  border-radius: 8px;
+  background: #e9563e;
+  width: 400px;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.speech-bubble {
+  position: absolute;
+  top: 10px;
+  left: 190px;
+  background: white;
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 30px;
+  .speak {
+    img {
+      height: 40px;
+      width: 40px;
+    }
+    span {
+      margin: 0 5px;
+    }
+  }
+
+}
+
+.browser {
+  background: url("../images/browser-frame.png") no-repeat;
+  position: relative;
+  padding: 90px 0 0 20px;
+  min-height: 200px;
+  width: 670px;
+}
+
+@keyframes flip {
+  from {
+    opacity: 0;
+    transform: rotateX(180deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(360deg);
+  }
+}
+
+.flip {
+  animation-name: flip;
+  animation-duration: 1s;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.blink {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+}
+
+.blur {
+  opacity: 0.1;
+}
+
+.keyboard-keys {
+  padding: 10px 0;
+  width: 600px;
+  .pull-left {
+    margin-right: 10px;
+  }
+}
+
+.exe {
+  padding: 10px 20px;
+  border: 1px solid #808080;
+}
+
+.button-1 {
+  background: #FEDA71;
+  background: -moz-linear-gradient(top, #FEDA71 0%, #FEBB49 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FEDA71), color-stop(100%, #FEBB49));
+  background: -webkit-linear-gradient(top, #FEDA71 0%, #FEBB49 100%);
+  background: -o-linear-gradient(top, #FEDA71 0%, #FEBB49 100%);
+  background: -ms-linear-gradient(top, #FEDA71 0%, #FEBB49 100%);
+  background: linear-gradient(top, #FEDA71 0%, #FEBB49 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FEDA71', endColorstr='#FEBB49', GradientType=0);
+  padding: 8px 18px;
+  color: #623F1D;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  border-radius: 48px;
+  -moz-border-radius: 48px;
+  -webkit-border-radius: 48px;
+  border: 1px solid #623F1D
 }
