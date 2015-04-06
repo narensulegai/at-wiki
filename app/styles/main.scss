@@ -29,16 +29,20 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 5px;
   border: 1px solid grey;
   border-radius: 30px;
+  .audio {
+    background: url("../images/audio.png") no-repeat center;
+    height: 40px;
+    width: 40px;
+  }
   .speak {
-    img {
-      height: 40px;
-      width: 40px;
+    clear: both;
+    div {
+      float: left;
     }
-    span {
-      margin: 0 5px;
+    div:nth-child(2) {
+      margin: 10px 5px 0 10px;
     }
   }
-
 }
 
 .browser {

@@ -7,6 +7,7 @@
     The example below simulates a non-sighted individual using a screen reader. The goal of this exercise is to use keyboard <b>only</b> to submit a login form.
     <div ng-controller="NonSightedUserSimulationCtrl">
       <br/>
+
       <p>
         <button ng-click="start()" class="button-1">Click Here To Begin</button>
       </p>
@@ -66,23 +67,23 @@
           <!--Speech bubble-->
           <div class="speech-bubble">
             <div ng-show="step==1" class="speak">
-              <img src="images/audio.png" alt="audio"/>
+              <div class="audio"></div>
             </div>
             <div ng-show="step==2" class="speak">
-              <img src="images/audio.png" alt="audio" ng-class="{blink:step==2}"/>
-              <span>Please enter your user name and password</span>
+              <div class="audio" ng-class="{blink:step==2}"></div>
+              <div>Please enter your user name and password</div>
             </div>
             <div ng-show="step==3" class="speak">
-              <img src="images/audio.png" alt="audio" ng-class="{blink:step==3}"/>
-              <span>User name edit text</span>
+              <div class="audio" ng-class="{blink:step==3}"></div>
+              <div>User name edit text</div>
             </div>
             <div ng-show="step==4" class="speak">
-              <img src="images/audio.png" alt="audio" ng-class="{blink:step==4}"/>
-              <span>User password edit text</span>
+              <div class="audio" ng-class="{blink:step==4}"></div>
+              <div>User password edit text</div>
             </div>
             <div ng-show="step==5" class="speak">
-              <img src="images/audio.png" alt="audio" ng-class="{blink:step==5}"/>
-              <span>Login button</span>
+              <div class="audio" ng-class="{blink:step==5}"></div>
+              <div>Login button</div>
             </div>
           </div>
 
